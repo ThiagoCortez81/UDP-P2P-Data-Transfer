@@ -99,7 +99,7 @@ int main(){
                 printf("Dados do arquivo enviado.\n Aguardando dados\n");
             }
             else if (status == 0){
-                strcpy(buffer, "0Erro-0001");
+                strcpy(buffer, "0connect: no such file or directory");
                 if (sendto(sock_servidor, buffer, strlen(buffer) , 0 , (struct sockaddr *) &addr_cliente, sizeof(addr_cliente)) == SOCKET_ERROR){
                     printf("Erro da função sendto() : %d\n" , WSAGetLastError());
                     exit(1);

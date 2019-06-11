@@ -63,7 +63,7 @@ int main(){
            strcpy(nome_arquivo, mensagem);
            arquivo=fopen(nome_arquivo, "rb");
            if(arquivo == NULL){
-                strcpy(mensagem, "connect: no such file or directory");
+                strcpy(mensagem, "0connect: no such file or directory");
                 // sendto usada para UDP
                 if (sendto(meuSocket, mensagem, strlen(mensagem) , 0 , (struct sockaddr *) &addr_cliente1, sizeof(SOCKADDR)) == -1){
                     printf(" Erro da funcao sendto(): %d\n" , WSAGetLastError());
